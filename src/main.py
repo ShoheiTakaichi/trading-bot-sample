@@ -12,7 +12,7 @@ from Signal.Signal import Signal
 
 def main():
     bitflyer = ccxws.bitflyer(
-        apiKey='WY5DrrTHiMLows8xdBmbcL', secret='ddhkuuvZc/hVLbJrMvGzgu8SJ4smXq9UKIglQyG3M58='
+        apiKey='', secret=''
     )
     multiplexer = Multiplexer()
     WorkerList = [
