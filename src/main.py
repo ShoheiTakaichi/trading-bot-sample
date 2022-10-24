@@ -18,6 +18,7 @@ def main():
     WorkerList = [
         WsReceiver(bitflyer, "bitflyer"),
         WsSender(bitflyer, "bitflyer"),
+        Clock(),
         CustomClock(),
         EventLogger(),
         SOD({"bitflyer": ["BTC/JPY"]}),

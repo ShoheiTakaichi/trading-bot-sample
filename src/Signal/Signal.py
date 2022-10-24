@@ -23,7 +23,7 @@ class Signal(IWorker):
         print(event)
 
     def onUpdateExecution(self, event):
-        print(event)
+        print('tt')
         
     def onUpdateBalance(self, event):
         print(event)
