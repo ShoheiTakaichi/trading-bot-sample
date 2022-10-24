@@ -8,10 +8,11 @@ from botframelib.Event import *
 from botframelib.EventSourcing import *
 from botframelib.Worker import *
 
+from Signal.Signal import Signal
 
 def main():
     bitflyer = ccxws.bitflyer(
-        apiKey='', secret=''
+        apiKey='WY5DrrTHiMLows8xdBmbcL', secret='ddhkuuvZc/hVLbJrMvGzgu8SJ4smXq9UKIglQyG3M58='
     )
     multiplexer = Multiplexer()
     WorkerList = [
@@ -20,7 +21,8 @@ def main():
         CustomClock(),
         EventLogger(),
         SOD({"bitflyer": ["BTC/JPY"]}),
-        # TickerCompaction(),
+        TickerCompaction(),
+        Signal()
         # TradeHistory(),
     ]
 
