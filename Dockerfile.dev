@@ -1,0 +1,10 @@
+FROM python:3.10
+
+WORKDIR /workspace
+
+COPY ./src/requirements.dev.txt ./src/
+
+RUN pip install --upgrade pip
+RUN pip install -r ./src/requirements.dev.txt
+
+RUN apt-get update && apt-get install -y vim
