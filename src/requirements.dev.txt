@@ -5,7 +5,7 @@ anyio==3.6.1
 async-timeout==4.0.2
 attrs==22.1.0
 ccxt==1.91.12
-ccxws @ git+https://oauth2:glpat-dQox6ZvKtsuiNYHR66vq@gitlab.com/gemma11/trading_bot/ccxws.git
+ccxws @ git+https:///gemma11/trading_bot/ccxws.git
 certifi==2022.6.15
 cffi==1.15.1
 charset-normalizer==2.1.1
