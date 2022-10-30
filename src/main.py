@@ -21,9 +21,11 @@ def main():
         Clock(),
         CustomClock(),
         EventLogger(),
-        SOD({"bitflyer": ["BTC/JPY"]}),
+        SOD({"bitflyer": ["FX_BTC/JPY"]}),
         TickerCompaction(),
-        Signal()
+        Signal(),
+        CryptoWatch(),
+        CandleStickCompaction(),
         # TradeHistory(),
     ]
 

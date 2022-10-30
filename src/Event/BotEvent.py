@@ -4,7 +4,7 @@ from uuid import UUID
 from botframelib.EventSourcing import IEvent
 
 
-class BotDoOrder(IEvent):
+class BotCreateOrder(IEvent):
     id_: UUID
     action: str
     wsengine_name: str
