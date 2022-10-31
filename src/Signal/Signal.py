@@ -3,6 +3,7 @@ import time
 import uuid
 import random
 from typing import Optional, Tuple
+import talib
 
 import numpy as np
 from ccxws.models import quote
@@ -20,6 +21,7 @@ class Signal(IWorker):
         IWorker.__init__(self)
         self.compactionCandle5min = []
         self.isFilled = False
+        self.signal = 'nutrial'
 
     def onCompactionCandle5min(self, event):
         ohlcv = [event.time, event.open, event.high, event.low, event.close, 0,event.volume]
@@ -50,4 +52,3 @@ class Signal(IWorker):
     def onEveryMinute(self, event):
         if not self.isFilled:
             self.eventStory.put(CryptoWatchEvent(exchange='bitflyer', symbol='FX_BTC/JPY'))
-    
